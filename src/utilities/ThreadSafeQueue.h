@@ -8,6 +8,7 @@
 #include <condition_variable>
 #include <mutex>
 #include <queue>
+#include <stdexcept>
 
 template<typename T> class ThreadSafeQueue
 {
@@ -92,7 +93,7 @@ template<typename T> class ThreadSafeQueue
 
         m_consumedData.notify_all();
     }
-    
+
     /* Take an item from the front of the queue, and do NOT remove it */
     T &front()
     {

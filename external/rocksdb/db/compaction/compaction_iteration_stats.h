@@ -7,6 +7,8 @@
 
 #include "rocksdb/rocksdb_namespace.h"
 
+#include <cstdint>
+
 struct CompactionIterationStats {
   // Compaction statistics
 
